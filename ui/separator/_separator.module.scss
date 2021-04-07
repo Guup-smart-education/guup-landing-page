@@ -1,0 +1,13 @@
+.guup {
+  &-separator {
+    &.small {
+      height: 15pt;
+    }
+    &.medium {
+      height: 30pt;
+    }
+    &.large {
+      height: 45pt;
+    }
+  }
+}

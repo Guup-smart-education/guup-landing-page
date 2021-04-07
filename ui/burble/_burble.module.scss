@@ -1,0 +1,23 @@
+.guup-burble {
+  border-radius: 50%;
+  // Sizes
+  &-small {
+    height: 250pt;
+    width: 250pt;
+  }
+  &-medium {
+    height: 325pt;
+    width: 325pt;
+  }
+  &-large {
+    height: 400pt;
+    width: 400pt;
+  }
+  // Colors
+  &-primary {
+    background: radial-gradient(circle closest-side, #FF2A96, transparent 100%);
+  }
+  &-secondary {
+    background: radial-gradient(circle closest-side, #53FEB6, transparent 100%);
+  }
+}

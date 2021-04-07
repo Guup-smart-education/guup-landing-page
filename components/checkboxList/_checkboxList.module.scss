@@ -1,0 +1,13 @@
+.guup-checkboxlist {
+  &_wrapper {
+    position: relative;
+    .guup-error {
+      position: absolute;
+      font-size: 10pt;
+      font-weight: bold;
+      top: 0;
+      transform: translateY(-100%);
+      left: -6pt;
+    }
+  }
+}

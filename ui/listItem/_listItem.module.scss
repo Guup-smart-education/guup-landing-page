@@ -1,0 +1,10 @@
+.guup-listitem {
+  display: flex;
+  flex-direction: row;
+  &-icon {
+    width: 60pt;
+  }
+  &-info {
+    flex: 1;
+  }
+}

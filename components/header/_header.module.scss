@@ -1,0 +1,16 @@
+.guup {
+  &-header {
+    height: 65pt;
+    display: flex;
+    align-items: center;
+  }
+  &-menu {
+    &-item {
+      margin-left: 12pt;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}

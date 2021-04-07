@@ -1,0 +1,15 @@
+.guup-contact {
+  &_container {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 65pt);
+    padding-bottom: 85pt;
+    // padding-top: 85pt;
+  }
+  &_form {
+    &__input {
+      &-label {}
+      &-val {}
+    }
+  }
+}
