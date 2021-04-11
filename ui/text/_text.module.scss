@@ -1,14 +1,29 @@
+@import "../../node_modules/bulma/sass/utilities/mixins.sass";
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+
 .guup {
   &-text {
     &-wrapper {
-      margin: 0 1.2rem 0rem 0;
+      margin: 0 1em 0em 0;
       .title {
         line-height: 52pt;
         font-family: Museo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
       .subtitle {
-        line-height: 64pt;
         font-family: Museo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.1em !important;
+        @include until($tablet) {
+          font-size: 35pt !important;
+        }
+        @include tablet {
+          font-size: 35pt !important;
+        }
+        @include from($desktop) {
+          font-size: 42pt !important;
+        }
+        @include from($fullhd) {
+          font-size: 58pt !important;
+        }
       }
       .is-link:hover {
         cursor: pointer;
@@ -17,6 +32,29 @@
       .header {
         line-height: 42pt;
         font-family: Museo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .paragraph {
+        line-height: 1.45em !important;
+        @include until($tablet) {
+          font-size: 12pt !important;
+        }
+        @include tablet {
+          font-size: 14pt !important;
+        }
+        @include from($desktop) {
+          font-size: 14pt !important;
+        }
+      }
+      .text {
+        @include until($tablet) {
+          font-size: 12pt !important;
+        }
+        @include tablet {
+          font-size: 14pt !important;
+        }
+        @include from($desktop) {
+          font-size: 14pt !important;
+        }
       }
     }
     &-heavy {

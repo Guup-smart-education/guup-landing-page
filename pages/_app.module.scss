@@ -1,4 +1,22 @@
+@import "../node_modules/bulma/sass/utilities/mixins.sass";
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+
 .guup {
+  &-image {
+    width: '100%';
+    &-right {
+      @include until($tablet) {
+        width: 164% !important;
+        margin-left: -13%;
+      }
+    }
+    &-left {
+      @include until($tablet) {
+        width: 164% !important;
+        margin-left: -54%;
+      }
+    }
+  }
   &-section {
     &__container {}
     &__home {
@@ -7,10 +25,21 @@
       // padding-bottom: 50pt;
       .guup {
         &-body {
-          display: flex;
-          align-items: center;
-          height: calc(100vh - 65pt);
-          padding-bottom: 45pt;
+          // display: flex;
+          // align-items: center;
+          // height: calc(100vh - 65pt);
+          padding-bottom: 50pt;
+          padding-top: 50pt;
+          @include until($tablet) {
+            padding-bottom: 25pt;
+            padding-top: 25pt;
+          }
+          @include from($widescreen) {
+            height: calc(100vh - 65pt);
+            display: flex;
+            align-items: center;
+            padding-bottom: 85pt;
+          }
           .title {
             &-container {
               height: 100pt;
@@ -55,6 +84,9 @@
     }
     &__features {
       padding-top: 50pt;
+      @include until($tablet) {
+        padding-top: 25pt;
+      }
       // padding-bottom: 50pt;
       // margin-bottom: 100pt;
       .live-art {
@@ -94,6 +126,9 @@
       justify-content: center;
       align-items: center;
       height: 60vh;
+      @include until($tablet) {
+        height: 100vh;
+      }
     }
     &__footer {
       background-color: #FFFFFF;

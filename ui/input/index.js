@@ -11,6 +11,7 @@ const UIInput = ({
 	errors,
 	disabled,
 	type = 'text',
+	isLight,
 }) => {
 	const [isBlur, setIsBlur] = useState()
 	return (
@@ -48,6 +49,7 @@ UIInput.propTypes = {
 	errors: PropTypes.any,
 	disabled: PropTypes.bool,
 	type: PropTypes.string,
+	isLight: PropTypes.bool,
 }
 
 export default UIInput

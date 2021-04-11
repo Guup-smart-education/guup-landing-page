@@ -1,3 +1,6 @@
+@import "../../node_modules/bulma/sass/utilities/mixins.sass";
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+
 .guup-input {
   &_container {
     background-color: transparent;
@@ -25,9 +28,17 @@
     border-width: 1pt;
     border-color: #9D9D9D;
     width: 100%;
+    @include until($tablet) {
+      font-size: 12pt !important;
+    }
+    @include tablet {
+      font-size: 14pt !important;
+    }
+    @include from($desktop) {
+      font-size: 14pt !important;
+    }
     &::placeholder {
       color: #1C1C1C;
-      font-size: 14pt;
     }
     &:focus {
       background-color: transparent;

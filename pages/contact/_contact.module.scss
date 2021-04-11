@@ -1,15 +1,43 @@
+@import "../../node_modules/bulma/sass/utilities/mixins.sass";
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+
 .guup-contact {
   &_container {
     display: flex;
     align-items: center;
-    height: calc(100vh - 65pt);
     padding-bottom: 85pt;
-    // padding-top: 85pt;
+    @include from($widescreen) {
+      height: calc(100vh - 65pt);
+    }
   }
   &_form {
+    border-radius: 8pt;
+    background-color: #F2F2F2;
     &__input {
       &-label {}
       &-val {}
     }
+    &__success {
+      background-color: #F2F2F2;
+      border-radius: 8pt;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      .emoticon {
+        font-size: 80pt;
+      }
+      .message {
+        width: 60%;
+      }
+    }
+  }
+  &_overlay {
+    position: absolute;
+    height: 100vh;
+    transform: translateY(-50%);
+    width: 200vh;
   }
 }

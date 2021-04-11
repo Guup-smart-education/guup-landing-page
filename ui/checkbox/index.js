@@ -4,7 +4,14 @@ import PropTypes from 'prop-types'
 import styles from './_checkbox.module.scss'
 import Text from './../text'
 
-const UICheckBox = ({ label, onSelect, value, isSelected, disabled }) => {
+const UICheckBox = ({
+	label,
+	onSelect,
+	value,
+	isSelected,
+	disabled,
+	isLight,
+}) => {
 	return (
 		<div
 			className={classnames(styles['guup-checkbox_wrapper'])}
@@ -14,7 +21,9 @@ const UICheckBox = ({ label, onSelect, value, isSelected, disabled }) => {
 				{isSelected && <span className={classnames(styles['guup-check'])} />}
 			</div>
 			<div className={styles['guup-checkbox_wrapper__label']}>
-				<Text type='text'>{label}</Text>
+				<Text type='text' color={isLight ? 'light' : 'dark'}>
+					{label}
+				</Text>
 			</div>
 		</div>
 	)
@@ -26,6 +35,7 @@ UICheckBox.propTypes = {
 	value: PropTypes.any,
 	isSelected: PropTypes.bool,
 	disabled: PropTypes.bool,
+	isLight: PropTypes.bool,
 }
 
 export default UICheckBox

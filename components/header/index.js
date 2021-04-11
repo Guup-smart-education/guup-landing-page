@@ -17,8 +17,7 @@ const CHeader = () => {
 			<div
 				className={classnames(
 					styles['guup-header'],
-					'is-flex',
-					'is-align-content-center is-justify-content-space-between'
+					'is-flex is-align-content-center is-justify-content-space-between'
 				)}
 			>
 				<div className='is-flex ' onClick={() => router.push('/')}>
@@ -29,7 +28,7 @@ const CHeader = () => {
 						height='36'
 					/>
 				</div>
-				<ul className={classnames(styles['guup-menu'], 'is-flex')}>
+				{/* <ul className={classnames(styles['guup-menu'], 'is-flex')}>
 					<li className={classnames(styles['guup-menu-item'])}>Sobre</li>
 					<li className={classnames(styles['guup-menu-item'])}>Treinamentos</li>
 					<li className={classnames(styles['guup-menu-item'])}>Comunicação</li>
@@ -39,7 +38,7 @@ const CHeader = () => {
 					<li className={classnames(styles['guup-menu-item'])}>
 						Tenho interesse
 					</li>
-				</ul>
+				</ul> */}
 			</div>
 		</>
 	)

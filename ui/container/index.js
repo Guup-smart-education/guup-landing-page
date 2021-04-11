@@ -1,7 +1,11 @@
 import React from 'react'
 
 const UIContainer = ({ children }) => {
-	return <div className='container is-fullhd'>{children}</div>
+	return (
+		<div className='container is-fullhd pl-5 pr-5 is-overflow-hidden'>
+			{children}
+		</div>
+	)
 }
 
 UIContainer.propTypes = {}

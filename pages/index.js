@@ -6,9 +6,10 @@ import classnames from 'classnames'
 // Simple components
 import { UIContainer, UIText, UIButton, UIListItem, UIBurble } from './../ui'
 // Complex components
-import { CHeader, CBanner } from './../components'
+import { CHeader } from './../components'
 // App style
 import styles from './_app.module.scss'
+import { variants } from './../helper/animations'
 
 const ContactLink = () => {
 	const router = useRouter()
@@ -38,8 +39,6 @@ const Home = () => {
 	const refTitleSocial = useRef()
 	const refTitlePersonalite = useRef()
 	// Animations
-	// Animation > Images
-	const controlImageAnimation = useAnimation()
 	// Animation > Channel
 	const controlAnimationChannel = useAnimation()
 	const controlAnimationTitleChannel = useAnimation()
@@ -56,60 +55,12 @@ const Home = () => {
 	const controlAnimationTitlePersonalite = useAnimation()
 	const controlAnimationDescPersonalite = useAnimation()
 	// Animation > Variants
-	const variantBlockFadein = {
-		hidden: {
-			opacity: 0,
-			translateY: 20,
-		},
-		visible: {
-			opacity: 1,
-			translateY: 0,
-		},
-	}
-	const variantTextTranslate = {
-		hidden: {
-			translateY: 100,
-		},
-		visible: (i) => ({
-			opacity: 1,
-			translateY: 0,
-			transition: {
-				duration: 0.36,
-				ease: 'easeInOut',
-				delay: 0.08 * i,
-			},
-		}),
-	}
-	const variantTextFadein = {
-		hidden: {
-			translateY: 40,
-			opacity: 0,
-		},
-		visible: (i) => ({
-			translateY: 0,
-			opacity: 1,
-			transition: {
-				duration: 0.32,
-				ease: 'easeInOut',
-				delay: 0.12 * i,
-			},
-		}),
-	}
-	const variantImageTranslate = {
-		hidden: {
-			translateY: 100,
-			opacity: 0,
-		},
-		visible: (i) => ({
-			opacity: 1,
-			translateY: 0,
-			transition: {
-				duration: 0.36,
-				ease: 'easeInOut',
-				delay: 0.04 * i,
-			},
-		}),
-	}
+	const {
+		variantBlockFadein,
+		variantTextTranslate,
+		variantTextFadein,
+		variantImageTranslate,
+	} = variants
 	// Effects
 	useEffect(() => {
 		setFadeInAnimations({
@@ -188,8 +139,8 @@ const Home = () => {
 			<div className={classnames(styles['guup-section__home'], 'is-relative')}>
 				<UIContainer>
 					<div className={classnames(styles['guup-body'])}>
-						<div className='columns'>
-							<div className='column is-5 is-flex is-flex-direction-column is-justify-content-center'>
+						<div className='columns is-desktop'>
+							<div className='column is-12-mobile is-9-tablet is-offset-1-tablet is-offset-0-desktop is-4-tablet is-5-widescreen is-flex is-flex-direction-column is-justify-content-center'>
 								<div className='is-flex is-flex-wrap-wrap'>
 									{[
 										'Guup ',
@@ -230,7 +181,7 @@ const Home = () => {
 								>
 									<UIText type='paragraph'>
 										Um espaço moderno para se comunicar e empoderar equipes de
-										forma inteligente. Conteudos digitais, bate papos ao vivo,
+										forma inteligente. Conteúdos digitais, bate papos ao vivo,
 										treinamentos 24h ao dia. & Tudo em uma plataforma que se
 										adapta ao seu negócio.
 									</UIText>
@@ -251,8 +202,12 @@ const Home = () => {
 									</div>
 								</motion.div>
 							</div>
-
-							<div className='column is-7 is-flex is-align-items-center is-justify-content-center is-relative'>
+							<div
+								className={classnames(
+									styles['guup-image-right'],
+									'column is-12-mobile is-12-tablet is-7-widescreen is-flex is-align-items-center is-justify-content-center is-relative'
+								)}
+							>
 								<motion.div
 									custom={2}
 									initial='hidden'
@@ -299,7 +254,7 @@ const Home = () => {
 						variants={variantBlockFadein}
 					>
 						<div className='columns'>
-							<div className='column is-10'>
+							<div className='column is-12-mobile is-9-tablet is-offset-1-tablet is-offset-0-desktop is-8-tablet is-8-desktop is-8-widescreen is-10-fullhd'>
 								<motion.div
 									initial='hidden'
 									variants={variantTextTranslate}
@@ -341,8 +296,13 @@ const Home = () => {
 								/>
 							</div>
 						</div>
-						<div className='columns'>
-							<div className='column is-7 is-relative'>
+						<div className='columns is-desktop'>
+							<div
+								className={classnames(
+									styles['guup-image-left'],
+									'column is-12-mobile is-12-tablet is-7-widescreen is-7-fullhd is-relative'
+								)}
+							>
 								<motion.div
 									custom={2}
 									initial='hidden'
@@ -370,16 +330,16 @@ const Home = () => {
 									/>
 								</motion.div>
 							</div>
-							<div className='column is-5 is-flex is-flex-direction-column is-justify-content-center'>
+							<div className='column is-12-mobile is-8-mobile is-8-tablet is-offset-2-tablet is-5-widescreen is-offset-0-desktop is-5-fullhd is-flex is-flex-direction-column is-justify-content-center'>
 								<motion.div
 									initial='hidden'
 									animate={controlAnimationDescChannel}
 									variants={variantTextFadein}
 								>
 									<UIText type='paragraph'>
-										Crie e compartilhe conteudos digitais dentro de um espaco
-										dedicado ao streaming de video de qualidade disponivel as
-										24h e acessivel desde qualquer lugar.
+										Crie e compartilhe conteúdos digitais dentro de um espaço
+										dedicado ao streaming de vídeo de qualidade disponível as
+										24h e acessível desde qualquer lugar.
 									</UIText>
 								</motion.div>
 								<div className='mt-5 mb-4'>
@@ -387,19 +347,19 @@ const Home = () => {
 										{
 											image: '/guup-icon-diamond.png',
 											description:
-												'Conteudos de qualidade personalizados para a sua comunidade',
+												'Conteúdos de qualidade personalizados para a sua comunidade',
 											label: 'Personalidade',
 										},
 										{
 											image: '/guup-icon-hours.png',
 											description:
-												'Conteudos acessiveis desde qualquer lugar e em qualquer momento',
+												'Conteúdos acessíveis desde qualquer lugar e em qualquer momento',
 											label: 'Disponibilidade',
 										},
 										{
 											image: '/guup-icon-live.png',
 											description:
-												'Faça transmisões ao vivo em uma plataforma totalmente provada',
+												'Faça transmissões ao vivo em uma plataforma totalmente privada',
 											label: 'Ao vivo',
 										},
 									].map(({ image, description, label }, i) => (
@@ -491,7 +451,7 @@ const Home = () => {
 						variants={variantBlockFadein}
 					>
 						<div className='columns'>
-							<div className='column is-9 is-offset-3'>
+							<div className='column is-12-mobile is-9-tablet is-offset-1-tablet is-offset-0-desktop is-9-desktop is-offset-3-desktop'>
 								<motion.div
 									initial='hidden'
 									variants={variantTextTranslate}
@@ -521,8 +481,13 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className='columns mt-4'>
-							<div className='column is-7 is-relative'>
+						<div className='columns is-desktop mt-4'>
+							<div
+								className={classnames(
+									styles['guup-image-right'],
+									'column is-12-mobile is-12-tablet is-7-desktop is-relative'
+								)}
+							>
 								<Image
 									src='/guup-burbles-colors-3.png'
 									alt='Burble color pink'
@@ -543,7 +508,7 @@ const Home = () => {
 									priority
 								/>
 							</div>
-							<div className='column is-5 pr-6 is-flex is-flex-direction-column is-justify-content-center'>
+							<div className='column is-12-mobile is-8-mobile is-8-tablet is-offset-2-tablet is-5-widescreen is-offset-0-desktop is-5-fullhd pr-6 is-flex is-flex-direction-column is-justify-content-center'>
 								<motion.div
 									initial='hidden'
 									animate={controlAnimationDescSocial}
@@ -553,7 +518,7 @@ const Home = () => {
 										Tenha um espaço para falar com a sua equipe, para
 										compartilhar noticias, criar bate papos ao vivo, anuncie a
 										chegada de um novo colaborador e/ou os logros da sua
-										empresa,seja transparente com a sua equipe!!
+										empresa, seja transparente com a sua equipe!!
 									</UIText>
 								</motion.div>
 								<div className='mt-5 mb-4'>
@@ -573,7 +538,7 @@ const Home = () => {
 										{
 											image: '/guup-icon-news.png',
 											description:
-												'Crie um ambiente transparente com o nosso espaço de noticias e conteudos',
+												'Crie um ambiente transparente com o nosso espaço de notícias e conteúdos',
 											label: 'Noticias',
 										},
 									].map(({ image, description, label }, i) => (
@@ -640,8 +605,8 @@ const Home = () => {
 							animate={controlAnimationPersonalite}
 							variants={variantBlockFadein}
 						>
-							<div className='columns'>
-								<div className='column is-5'>
+							<div className='columns is-desktop'>
+								<div className='column is-12-mobile is-9-tablet is-offset-1-tablet is-offset-0-desktop is-5-desktop'>
 									<div className='columns'>
 										<div className='column is-10' ref={refTitlePersonalite}>
 											<motion.div
@@ -704,7 +669,12 @@ const Home = () => {
 										</motion.div>
 									</div>
 								</div>
-								<div className='column is-7 is-relative'>
+								<div
+									className={classnames(
+										styles['guup-image-right'],
+										'column is-12-mobile is-12-tablet is-7-desktop is-relative'
+									)}
+								>
 									<Image
 										src='/guup-brand-art-2.png'
 										alt='Enterprise custom brand'
@@ -735,7 +705,7 @@ const Home = () => {
 							</div>
 						</div>
 						<div className='columns is-centered pt-5'>
-							<div className='mt-5'>
+							<div className='column mt-5 is-flex is-justify-content-center'>
 								<ContactLink />
 							</div>
 						</div>
@@ -749,8 +719,8 @@ const Home = () => {
 							<div className='is-flex is-flex-direction-column is-justify-content-space-between'>
 								<div>
 									<UIText>
-										Formas inteligentes de comaprtilhar conhecimento e manter a
-										sua comunicação num lugar só
+										Formas inteligentes de compartilhar conhecimento e manter a
+										sua comunicação em um lugar só
 									</UIText>
 								</div>
 								<div>
@@ -767,9 +737,9 @@ const Home = () => {
 								Tenho interesse
 							</UIText>
 							<UIText isLink onPress={() => console.log('Personalidade')}>
-								Personalidade
+								Voltar ao inicio
 							</UIText>
-							<UIText isLink onPress={() => console.log('Comunicação')}>
+							{/* <UIText isLink onPress={() => console.log('Comunicação')}>
 								Comunicação
 							</UIText>
 							<UIText isLink onPress={() => console.log('Treinamentos')}>
@@ -777,7 +747,7 @@ const Home = () => {
 							</UIText>
 							<UIText isLink onPress={() => console.log('Sobre')}>
 								Sobre
-							</UIText>
+							</UIText> */}
 						</div>
 					</div>
 				</UIContainer>

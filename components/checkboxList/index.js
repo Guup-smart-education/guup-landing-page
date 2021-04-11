@@ -12,6 +12,7 @@ const index = ({
 	disabled,
 	validation,
 	errors,
+	isLight = false,
 }) => {
 	const [currentBox, setCurrentBox] = useState()
 	useEffect(() => {
@@ -40,6 +41,7 @@ const index = ({
 							onSelect: setCurrentBox,
 							isSelected: value === currentBox,
 							disabled,
+							isLight,
 						}}
 					/>
 				</div>
@@ -62,6 +64,7 @@ index.propTypes = {
 	validation: PropTypes.shape({
 		required: PropTypes.bool,
 	}),
+	isLight: PropTypes.bool,
 }
 
 export default index

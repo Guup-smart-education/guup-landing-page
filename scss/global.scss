@@ -23,11 +23,15 @@ $text-strong: #FFFFFF;
 // Sizes
 $size-1: 110pt;
 $size-2: 58pt;
-$size-3: 36pt;
+$size-3: 28pt;
 $size-4: 16pt;
 $size-5: 14pt;
 $size-6: 12pt;
 $size-7: 10pt;
+
+// Responsive
+$desktop: 1025px;
+$mobile: 414px;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
