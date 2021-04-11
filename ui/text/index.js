@@ -47,6 +47,7 @@ UIText.propTypes = {
 		'paragraph',
 		'common',
 		'text',
+		'header',
 	]),
 	color: PropTypes.oneOf([
 		'dark',
