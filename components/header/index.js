@@ -12,12 +12,16 @@ const CHeader = () => {
 			<Head>
 				<title>Guup smart platform</title>
 				<meta property='og:url' content='https://www.guupse.com' />
+				<meta property='og:site_name' content='Guupse' />
 				<meta property='og:title' content='Guup smart platform' />
 				<meta
 					property='og:description'
-					content='Guup, uma forma inteligente de se comunicar'
+					content='Um espaço moderno para se comunicar e empoderar equipes de forma inteligente. Conteúdos digitais, bate papos ao vivo, treinamentos 24h ao dia & Tudo em uma plataforma que se adapta ao seu negócio.'
 				/>
-				<meta property='og:image' content='/guup-icon-coloured.svg' />
+				<meta
+					property='og:image'
+					content='https://firebasestorage.googleapis.com/v0/b/landing-page-29d05.appspot.com/o/guup-icon-coloured.svg?alt=media&token=d3221853-5cc0-4e7a-b636-7ab143d8b3cf'
+				/>
 				<link rel='icon' href='/favicon.ico' />
 				<link rel='preload' href='/fonts/museo/museo.woff' as='font' />
 			</Head>
