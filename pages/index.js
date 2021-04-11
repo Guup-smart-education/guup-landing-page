@@ -182,7 +182,7 @@ const Home = () => {
 									<UIText type='paragraph'>
 										Um espaço moderno para se comunicar e empoderar equipes de
 										forma inteligente. Conteúdos digitais, bate papos ao vivo,
-										treinamentos 24h ao dia. & Tudo em uma plataforma que se
+										treinamentos 24h ao dia & Tudo em uma plataforma que se
 										adapta ao seu negócio.
 									</UIText>
 								</motion.div>
@@ -338,8 +338,8 @@ const Home = () => {
 								>
 									<UIText type='paragraph'>
 										Crie e compartilhe conteúdos digitais dentro de um espaço
-										dedicado ao streaming de vídeo de qualidade disponível as
-										24h e acessível desde qualquer lugar.
+										dedicado ao streaming de vídeo de qualidade disponível às
+										24h e acessível em qualquer lugar.
 									</UIText>
 								</motion.div>
 								<div className='mt-5 mb-4'>
@@ -353,7 +353,7 @@ const Home = () => {
 										{
 											image: '/guup-icon-hours.png',
 											description:
-												'Conteúdos acessíveis desde qualquer lugar e em qualquer momento',
+												'Conteúdos acessíveis de qualquer lugar e em qualquer momento',
 											label: 'Disponibilidade',
 										},
 										{
@@ -516,7 +516,7 @@ const Home = () => {
 								>
 									<UIText type='paragraph'>
 										Tenha um espaço para falar com a sua equipe, para
-										compartilhar noticias, criar bate papos ao vivo, anuncie a
+										compartilhar notícias, criar bate papos ao vivo, anuncie a
 										chegada de um novo colaborador e/ou os logros da sua
 										empresa, seja transparente com a sua equipe!!
 									</UIText>
@@ -700,7 +700,7 @@ const Home = () => {
 							<div className='column is-5 has-text-centered'>
 								<UIText type='paragraph' color='light'>
 									Quer mudar a forma de se comunicar e gerenciar a sua equipe?
-									entre em contato com a gente 😉
+									Entre em contato com a gente 😉
 								</UIText>
 							</div>
 						</div>
@@ -720,7 +720,7 @@ const Home = () => {
 								<div>
 									<UIText>
 										Formas inteligentes de compartilhar conhecimento e manter a
-										sua comunicação em um lugar só
+										sua comunicação em um único lugar
 									</UIText>
 								</div>
 								<div>
