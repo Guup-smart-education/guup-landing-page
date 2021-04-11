@@ -20,7 +20,7 @@ const CHeader = () => {
 				/>
 				<meta
 					property='og:image'
-					content='https://firebasestorage.googleapis.com/v0/b/landing-page-29d05.appspot.com/o/guup-icon-coloured.svg?alt=media&token=d3221853-5cc0-4e7a-b636-7ab143d8b3cf'
+					content='https://guupse.com/_next/image?url=%2Fguup-icon-coloured.svg&w=96&q=75'
 				/>
 				<link rel='icon' href='/favicon.ico' />
 				<link rel='preload' href='/fonts/museo/museo.woff' as='font' />
