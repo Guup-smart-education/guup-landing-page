@@ -11,6 +11,13 @@ const CHeader = () => {
 		<>
 			<Head>
 				<title>Guup smart platform</title>
+				<meta property='og:url' content='https://www.guupse.com' />
+				<meta property='og:title' content='Guup smart platform' />
+				<meta
+					property='og:description'
+					content='Guup, uma forma inteligente de se comunicar'
+				/>
+				<meta property='og:image' content='/guup-icon-coloured.svg' />
 				<link rel='icon' href='/favicon.ico' />
 				<link rel='preload' href='/fonts/museo/museo.woff' as='font' />
 			</Head>
